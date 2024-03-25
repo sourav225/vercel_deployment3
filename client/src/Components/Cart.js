@@ -9,6 +9,7 @@ function Cart() {
   const [cart, setCart] = useState([]);
   const [status, setstatus] = useState("");
   const [refresh, setRefresh] = useState(true);
+  axios.defaults.withCredentials = true;
   useEffect(() => {
     getCart();
     if (status === "Approved") {
