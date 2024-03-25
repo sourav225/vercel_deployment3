@@ -14,6 +14,7 @@ function Account() {
     state: "",
     zip: "",
   });
+  axios.defaults.withCredentials = true;
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get("https://vercel-deployment3-server3.vercel.app/check", { withCredentials: true });
