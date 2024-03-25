@@ -21,7 +21,7 @@ function Navbar({ refresh }) {
   }, [refresh]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/cart", { withCredentials: true })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { withCredentials: true })
       .then((response) => {
         if (response.data.datap !== "") {
           const cartData = response.data.datap || [];
@@ -53,7 +53,7 @@ function Navbar({ refresh }) {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/search`, { searchTerm });
+      const response = await axios.post(`https://vercel-deployment3-server3.vercel.app/search`, { searchTerm });
 
       const data = response.data;
       console.log(data.message);
