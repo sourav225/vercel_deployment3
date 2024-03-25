@@ -19,7 +19,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 const PORT = 5000;
 
-mongoose.connect("mongodb://localhost:27017/ecommerce", {
+mongoose.connect("mongodb+srv://souravlayekjsr100:Sourav%40123@cluster0.yhf674r.mongodb.net/ecommerce?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
