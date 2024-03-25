@@ -1,0 +1,235 @@
+.loginform {
+  background-color: #0284ba;
+  /* border-radius: 25px; */
+}
+.login {
+  margin-left: 5px;
+}
+.lgbtn {
+  width: 80px;
+  height: 30px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+}
+div.cont {
+  margin: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+.logintop {
+  margin-left: 10px;
+}
+.navbar {
+  display: flex;
+}
+.navbarpat {
+  background-color: #cdcdcd !important;
+  border-radius: 8px;
+  margin: 20px;
+  margin-top: 3px;
+  color: green !important;
+}
+
+.navbarpat ul {
+  overflow: auto;
+}
+
+.navbarpat li {
+  float: left;
+  list-style: none;
+  margin: 0px 0px;
+}
+
+.navbarpat div ul li a {
+  padding: 3px 3px;
+  text-decoration: none;
+  color: rgb(105, 105, 105) !important;
+  font-weight: 600;
+}
+.navbarpat div ul li a.active {
+  color: #0284ba !important;
+  font-weight: bold;
+}
+
+.navbarpat div ul li a:hover {
+  color: #0284ba !important;
+  font-weight: bold;
+}
+
+.navbarpat .navbar-nav .nav-link:hover {
+  color: #0284ba !important; /* Change color on hover */
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: #0284ba !important;
+}
+
+.searchpat {
+  float: right;
+  color: white;
+  padding: 0px px;
+  margin-right: 20px;
+  border: 0px;
+}
+
+.navbarpat input {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 200px;
+  margin-right: 10px;
+}
+.navbtn {
+  margin-bottom: 50px;
+  width: 75px;
+}
+.card {
+  margin: 10px;
+}
+.prodcont {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.carousel-item {
+  background-color: black;
+}
+.carousel-item > .row > .col-md-6 > img {
+  height: 500px;
+  width: fit-content;
+  padding: 25px;
+  padding-left: 125px;
+}
+.carousel {
+  margin: 20px;
+  margin-top: 0px;
+}
+.crtext {
+  text-decoration: solid;
+  text-decoration-color: white;
+}
+.sr-only {
+  color: rgb(255, 255, 255);
+  font-weight: 900;
+}
+.carousel-indicators {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.indicator-item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ccc; /* Change this to your preferred color */
+  margin: 0 5px; /* Adjust as needed */
+  cursor: pointer; /* Add if you want the indicator to look clickable */
+}
+
+.indicator-item.active {
+  background-color: #555; /* Change this to your preferred active color */
+}
+
+#v-pills-tab {
+  background: #cdcdcd;
+}
+.nav-link {
+  color: rgb(128, 128, 128);
+}
+.nav-pills .nav-link.active,
+.nav-pills .nav-link.active:focus,
+.nav-pills .nav-link.active:hover,
+.nav-pills .show > .nav-link {
+  background-color: #0284ba !important; /* Change this to your desired color */
+  color: #ffffff !important; /* Text color for the active tab */
+}
+
+.nav-link {
+  /* Adjust this value for the desired margin */
+  color: rgb(105, 105, 105) !important; /* Text color for the tabs */
+}
+
+.nav-pills .nav-link {
+  border: 2px solid white !important;
+  border-right: 0px !important;
+  border-radius: 0 !important;
+}
+.accountcont {
+  margin: 20px;
+}
+#formdes {
+  border-radius: 10px;
+  width: 100%;
+  background: rgb(211, 211, 211);
+  height: 30px;
+  text-size-adjust: 30px;
+}
+#formdes2 {
+  border-radius: 10px;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  height: 30px;
+  text-size-adjust: 30px;
+}
+#citydes {
+  display: inline;
+  margin-right: 580px;
+}
+#statedes {
+  display: inline;
+  margin-right: 300px;
+}
+#zipdes {
+  display: inline;
+}
+#addressspec {
+  margin-top: 15px;
+}
+
+#citydesinp {
+  border-radius: 10px;
+  width: 600px;
+  margin-right: 38px;
+  background: rgb(255, 255, 255);
+  height: 30px;
+}
+#statedesinp {
+  border-radius: 10px;
+  width: 320px;
+  margin-right: 50px;
+  background: rgb(255, 255, 255);
+  height: 30px;
+  border: 2px solid black;
+}
+#zipdesinp {
+  border-radius: 10px;
+  width: 170px;
+  margin-right: 38px;
+  background: rgb(255, 255, 255);
+  height: 30px;
+  border: 2px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+ul.navbar-nav > li {
+  margin: 5px;
+}
+
+ul.navbar-nav > li > a > :active {
+  color: #0284ba;
+}
+/* Add this CSS to your stylesheet or inline style */
+.zoom {
+  transition: transform 0.3s ease-in-out;
+  transition-delay: o.1s;
+}
+
+.zoom:hover {
+  transform: scale(1.1);
+}
