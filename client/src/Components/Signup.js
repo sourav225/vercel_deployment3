@@ -25,7 +25,7 @@ function Signup() {
     console.log(zip);
 
     axios
-      .post("http://localhost:5000/signup", { name: name, mobilenumber: mobilenumber, email: email, password: password, address: address, address2: address2, city: city, state: state, zip: zip })
+      .post("https://vercel-deployment3-server3.vercel.app/signup", { name: name, mobilenumber: mobilenumber, email: email, password: password, address: address, address2: address2, city: city, state: state, zip: zip })
       .then((response) => {
         if (response.status === 202) {
           alert("User with same email exists");
