@@ -15,7 +15,7 @@ function ProductPage() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/products/${productId}`)
+      .get(`https://vercel-deployment3-server3.vercel.app/api/products/${productId}`)
       .then((response) => {
         setItem(response.data.datap || {}); // Assuming the data structure is an array
       })
@@ -23,7 +23,7 @@ function ProductPage() {
   }, [productId]);
   const handleClick = async (idi) => {
     axios
-      .get(`http://localhost:5000/api/addtocart/${idi}`)
+      .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`)
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
