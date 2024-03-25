@@ -12,7 +12,9 @@ app.use(cookieParser());
 const corsOptions = {
   origin: "https://vercel-deployment3-client3.vercel.app",
   methods:["GET","POST","PUT","DELETE"],
-  credentials: true, // Allow cookies to be sent with requests
+  credentials: true,
+  exposedHeaders: ["Content-Length", "Authorization"],
+  maxAge: 86400// Allow cookies to be sent with requests
 };
 
 app.use(cors(corsOptions));
