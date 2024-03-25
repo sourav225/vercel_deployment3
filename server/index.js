@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cookieParser());
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://vercel-deployment3-client3.vercel.app",
   methods:["GET","POST","PUT","DELETE"],
   credentials: true, // Allow cookies to be sent with requests
 };
