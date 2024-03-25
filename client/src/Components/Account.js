@@ -16,7 +16,7 @@ function Account() {
   });
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5000/check", { withCredentials: true });
+      const response = await axios.get("https://vercel-deployment3-server3.vercel.app/check", { withCredentials: true });
       const isLoggedIn = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("loggedIn="));
       if (isLoggedIn && isLoggedIn.split("=")[1] === "true") {
         setUser(response.data.datap);
@@ -29,7 +29,7 @@ function Account() {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/updateUser", { user });
+      const response = await axios.post("https://vercel-deployment3-server3.vercel.app/updateUser", { user });
       if (response.data.res === "Success") {
         alert("User data saved successfully!");
         window.location.alert();
