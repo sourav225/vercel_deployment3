@@ -11,6 +11,7 @@ const app = express();
 app.use(cookieParser());
 const corsOptions = {
   origin: "http://localhost:3000",
+  methods:["GET","POST","PUT","DELETE"],
   credentials: true, // Allow cookies to be sent with requests
 };
 
