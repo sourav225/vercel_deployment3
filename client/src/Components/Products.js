@@ -7,7 +7,7 @@ function Products({ handleClick, isProductPage }) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products")
+      .get("https://vercel-deployment3-server3.vercel.app/api/products")
       .then((response) => {
         setProducts(response.data.dat); // Assuming the data structure is an array
         console.log(response.data.dat);
