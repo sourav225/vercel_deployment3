@@ -19,7 +19,7 @@ function Cart() {
 
   const getCart = async () => {
     axios
-      .get("http://localhost:5000/api/cart", { withCredentials: true })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { withCredentials: true })
       .then((response) => {
         setCart(response.data.datap || []); // Assuming the data structure is an array
         console.log(response.data.datap);
@@ -28,7 +28,7 @@ function Cart() {
   };
   const handleClick = async (idi) => {
     axios
-      .get(`http://localhost:5000/api/addtocart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`, { withCredentials: true })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
@@ -36,7 +36,7 @@ function Cart() {
   };
   const handleMinusClick = async (idi) => {
     axios
-      .get(`http://localhost:5000/api/minustocart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/minustocart/${idi}`, { withCredentials: true })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
@@ -44,7 +44,7 @@ function Cart() {
   };
   const handleRemove = async (idi) => {
     axios
-      .get(`http://localhost:5000/api/removefromcart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/removefromcart/${idi}`, { withCredentials: true })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
