@@ -10,7 +10,7 @@ function ProductNavbar() {
   const [alertVisible, setAlertVisible] = useState(false);
   const handleClick = async (idi) => {
     axios
-      .get(`http://localhost:5000/api/addtocart/${idi}`)
+      .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`)
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
