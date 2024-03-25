@@ -31,7 +31,7 @@ function Top() {
 
     try {
       // Send login request to the server using Axios
-      const response = await axios.post("http://localhost:5000/login", { email, password });
+      const response = await axios.post("https://vercel-deployment3-server3.vercel.app/login", { email, password });
 
       const data = response.data;
       console.log(data.message);
@@ -59,7 +59,7 @@ function Top() {
     e.preventDefault();
     try {
       // Send logout request to the server using Axios
-      const response = await axios.get("http://localhost:5000/logout");
+      const response = await axios.get("https://vercel-deployment3-server3.vercel.app/logout");
       const data = response.data;
       console.log(data.message);
 
