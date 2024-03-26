@@ -41,9 +41,9 @@ function Top() {
       if (response.status === 200) {
         console.log(cook);
         setShowbutton(true); // You can define this function to handle successful login
-        document.cookie = "loggedIn=true; path=/;SameSite=none; Secure=true";
-        document.cookie = `username=${data.username}; path=/;SameSite=none; Secure=true`;;
-        document.cookie = `useremail=${data.useremail}; path=/;SameSite=none; Secure=true`;
+        document.cookie = "loggedIn=true; path=/;SameSite=None; Secure";
+        document.cookie = `username=${data.username}; path=/;SameSite=None; Secure`;
+        document.cookie = `useremail=${data.useremail}; path=/;SameSite=None; Secure`;
         console.log(data.username);
         setName(data.username);
         navigate("/");
