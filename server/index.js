@@ -48,6 +48,7 @@ app.get("/api/products/:id", async (req, res) => {
 });
 app.get("/api/cart", async (req, res) => {
   const usernameent = req.cookies.useremail;
+  console.log(usernameent);
   try {
     const Cartitems = await cart.find({ username: usernameent });
     if (usernameent) {
