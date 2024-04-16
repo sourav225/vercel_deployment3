@@ -17,9 +17,11 @@ function Account() {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("https://vercel-deployment3-server3.vercel.app/check", { withCredentials: true });
-      const isLoggedIn = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("loggedIn="));
-      if (isLoggedIn && isLoggedIn.split("=")[1] === "true") {
+      const isLoggedIn = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("loggedIn=")).split("=")[1];
+      const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+      const response = await axios.get("https://vercel-deployment3-server3.vercel.app/check", {loggedIn:isLoggedIn,useremail:isuserEmail});
+      
+      if (isLoggedIn === "true") {
         setUser(response.data.datap);
       }
     };
