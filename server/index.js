@@ -272,7 +272,7 @@ app.get("/check", async (req, res) => {
     console.log(loggedInCookie);
 
     if (loggedInCookie) {
-      const username = req.body.useremail;
+      const username = req.query.useremail;
       console.log(username);
       const user = await users.findOne({ email: username });
 
