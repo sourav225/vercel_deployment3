@@ -13,8 +13,8 @@ function Top() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const isLoggedIn = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("loggedIn="));
-      const loginname = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("username="));
+      const isLoggedIn = document.cookie?.split(";").find((cookie) => cookie.trim().startsWith("loggedIn="));
+      const loginname = document.cookie?.split(";").find((cookie) => cookie.trim().startsWith("username="));
       if (isLoggedIn && isLoggedIn.split("=")[1] === "true") {
         setShowbutton(true);
         setName(loginname.split("=")[1]);
