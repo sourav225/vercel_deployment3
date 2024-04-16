@@ -22,7 +22,7 @@ function Cart() {
       const isuserEmail=document.cookie.split(";")?.find((cookie)=>cookie.trim().startsWith("useremail="))?.split("=")[1];
       
     axios
-      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart",{params: { useremail: isuserEmail }})
       .then((response) => {
         setCart(response.data.datap || []); // Assuming the data structure is an array
         console.log(response.data.datap);
