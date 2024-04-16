@@ -19,7 +19,7 @@ function Cart() {
   }, [status, price]);
 
   const getCart = async () => {
-      const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+      const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
       
     axios
       .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
@@ -30,7 +30,7 @@ function Cart() {
       .catch((error) => console.error(error));
   };
   const handleClick = async (idi) => {
-    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
     axios
       .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`, { useremail:isuserEmaill })
       .then((response) => {
@@ -39,7 +39,7 @@ function Cart() {
       .catch((error) => console.error(error));
   };
   const handleMinusClick = async (idi) => {
-    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
     axios
       .get(`https://vercel-deployment3-server3.vercel.app/api/minustocart/${idi}`, { useremail:isuserEmail })
       .then((response) => {
@@ -48,7 +48,7 @@ function Cart() {
       .catch((error) => console.error(error));
   };
   const handleRemove = async (idi) => {
-    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
     axios
       .get(`https://vercel-deployment3-server3.vercel.app/api/removefromcart/${idi}`, { useremail: isuserEmail })
       .then((response) => {
