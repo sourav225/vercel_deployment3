@@ -22,7 +22,7 @@ function ProductPage() {
       .catch((error) => console.error(error));
   }, [productId]);
   const handleClick = async (idi) => {
-    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
+    const isuserEmail=document.cookie?.split(";").find((cookie)=>cookie.trim().startsWith("useremail="))?.split("=")[1];
     axios
       .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`,{useremail:isuserEmail})
       .then((response) => {
