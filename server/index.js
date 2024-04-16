@@ -274,11 +274,11 @@ app.post("/search", async (req, res) => {
 
 app.get("/check", async (req, res) => {
   try {
-    const loggedInCookie = req.cookies.loggedIn === "true";
+    const loggedInCookie = req.body.loggedIn === "true";
     console.log(loggedInCookie);
 
     if (loggedInCookie) {
-      const username = req.cookies.useremail;
+      const username = req.body.useremail;
       console.log(username);
       const user = await users.findOne({ email: username });
 
