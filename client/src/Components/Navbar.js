@@ -20,7 +20,7 @@ function Navbar({ refresh }) {
     fetchData();
   }, [refresh]);
   useEffect(() => {
-    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
+    const isuserEmail=document.cookie?.split(";").find((cookie)=>cookie.trim().startsWith("useremail="))?.split("=")[1];
     axios
       .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
       .then((response) => {
