@@ -22,7 +22,7 @@ function Navbar({ refresh }) {
   useEffect(() => {
     const isuserEmail=document.cookie?.split(";").find((cookie)=>cookie.trim().startsWith("useremail="))?.split("=")[1];
     axios
-      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart", {params:{ useremail: isuserEmail }})
       .then((response) => {
         if (response.data.datap !== "") {
           const cartData = response.data.datap || [];
