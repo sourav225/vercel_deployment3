@@ -20,8 +20,9 @@ function Navbar({ refresh }) {
     fetchData();
   }, [refresh]);
   useEffect(() => {
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
     axios
-      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { withCredentials: true })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
       .then((response) => {
         if (response.data.datap !== "") {
           const cartData = response.data.datap || [];
