@@ -17,8 +17,8 @@ function Account() {
   axios.defaults.withCredentials = true;
   useEffect(() => {
     const fetchData = async () => {
-      const isLoggedIn = document.cookie.split(";").find((cookie) => cookie.trim().startsWith("loggedIn=")).split("=")[1];
-      const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trim().startsWith("useremail=")).split("=")[1];
+      const isLoggedIn = document.cookie?.split(";").find((cookie) => cookie.trim().startsWith("loggedIn="))?.split("=")[1];
+      const isuserEmail=document.cookie?.split(";").find((cookie)=>cookie.trim().startsWith("useremail="))?.split("=")[1];
       const response = await axios.get("https://vercel-deployment3-server3.vercel.app/check", {loggedIn:isLoggedIn,useremail:isuserEmail});
       
       if (isLoggedIn === "true") {
