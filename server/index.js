@@ -61,7 +61,7 @@ app.get("/api/cart", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-app.get("/api/addtocart/:id", async (req, res) => {
+app.post("/api/addtocart/:id", async (req, res) => {
   const usernameent = req.body.useremail;
   try {
     // Assuming you have the username stored in the session
@@ -141,7 +141,7 @@ app.get("/api/addtocart/:id", async (req, res) => {
   }
 });
 
-app.get("/api/minustocart/:id", async (req, res) => {
+app.post("/api/minustocart/:id", async (req, res) => {
   const usernameent = req.body.useremail;
   try {
     const productId = parseInt(req.params.id);
@@ -175,7 +175,7 @@ app.get("/api/minustocart/:id", async (req, res) => {
   }
 });
 
-app.get("/api/removefromcart/:id", async (req, res) => {
+app.post("/api/removefromcart/:id", async (req, res) => {
   const usernameent = req.body.useremail;
   try {
     const productId = parseInt(req.params.id);
