@@ -10,6 +10,7 @@ import Signup from "./Components/Signup";
 function App() {
   return (
     <>
+    document.cookie = "live=true; path=/;SameSite=None; Secure";
       <Routes>
         <Route path="/" element={<Home refresh={true} />} />
         <Route path="/account" element={<Account />} />
