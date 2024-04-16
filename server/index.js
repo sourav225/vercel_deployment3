@@ -230,9 +230,6 @@ app.post("/login", async (req, res) => {
     const User = await users.findOne({ email, password });
 
     if (User) {
-      // Set a cookie on successful login
-      res.cookie("loggedIn", true, { httpOnly: true });
-      res.cookie("username", User.email, { httpOnly: true });
       res.status(200).json({ message: "Login successful!", username: User.name, useremail: User.email });
     } else {
       res.status(401).json({ message: "Invalid email or password" });
@@ -245,9 +242,6 @@ app.post("/login", async (req, res) => {
 
 app.get("/logout", async (req, res) => {
   try {
-    // Set a cookie on successful login
-    res.clearCookie("loggedIn");
-    res.clearCookie("username");
     res.status(200).json({ message: "Logout successful!" });
   } catch (error) {
     console.error(error);
