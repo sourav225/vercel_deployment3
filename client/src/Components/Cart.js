@@ -19,8 +19,10 @@ function Cart() {
   }, [status, price]);
 
   const getCart = async () => {
+      const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
+      
     axios
-      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { withCredentials: true })
+      .get("https://vercel-deployment3-server3.vercel.app/api/cart", { useremail: isuserEmail })
       .then((response) => {
         setCart(response.data.datap || []); // Assuming the data structure is an array
         console.log(response.data.datap);
@@ -28,24 +30,27 @@ function Cart() {
       .catch((error) => console.error(error));
   };
   const handleClick = async (idi) => {
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
     axios
-      .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/addtocart/${idi}`, { useremail:isuserEmaill })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
       .catch((error) => console.error(error));
   };
   const handleMinusClick = async (idi) => {
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
     axios
-      .get(`https://vercel-deployment3-server3.vercel.app/api/minustocart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/minustocart/${idi}`, { useremail:isuserEmail })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
       .catch((error) => console.error(error));
   };
   const handleRemove = async (idi) => {
+    const isuserEmail=document.cookie.split(";").find((cookie)=>cookie.trime().startsWith("useremail=")).split("=")[1];
     axios
-      .get(`https://vercel-deployment3-server3.vercel.app/api/removefromcart/${idi}`, { withCredentials: true })
+      .get(`https://vercel-deployment3-server3.vercel.app/api/removefromcart/${idi}`, { useremail: isuserEmail })
       .then((response) => {
         setstatus(response.data.res || {}); // Assuming the data structure is an array
       })
