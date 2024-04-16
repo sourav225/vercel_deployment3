@@ -8,7 +8,6 @@ import Cart from "./Components/Cart";
 import Signup from "./Components/Signup";
 
 function App() {
-  document.cookie = "live=true; path=/;SameSite=None; Secure";
   return (
     <>
     
