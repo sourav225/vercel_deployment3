@@ -47,7 +47,7 @@ app.get("/api/products/:id", async (req, res) => {
   }
 });
 app.get("/api/cart", async (req, res) => {
-  const usernameent = req.body.useremail;
+  const usernameent = req.query.useremail;
   console.log(usernameent);
   try {
     const Cartitems = await cart.find({ username: usernameent });
@@ -268,7 +268,7 @@ app.post("/search", async (req, res) => {
 
 app.get("/check", async (req, res) => {
   try {
-    const loggedInCookie = req.body.loggedIn === "true";
+    const loggedInCookie = req.query.loggedIn === "true";
     console.log(loggedInCookie);
 
     if (loggedInCookie) {
