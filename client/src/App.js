@@ -8,9 +8,10 @@ import Cart from "./Components/Cart";
 import Signup from "./Components/Signup";
 
 function App() {
+  document.cookie = "live=true; path=/;SameSite=None; Secure";
   return (
     <>
-    document.cookie = "live=true; path=/;SameSite=None; Secure";
+    
       <Routes>
         <Route path="/" element={<Home refresh={true} />} />
         <Route path="/account" element={<Account />} />
