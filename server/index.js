@@ -22,10 +22,7 @@ app.use(cors(corsOptions));
 app.use(express.json());
 const PORT = 5000;
 
-mongoose.connect("mongodb+srv://souravlayekjsr100:Sourav%40123@cluster0.yhf674r.mongodb.net/ecommerce?retryWrites=true&w=majority", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect("mongodb+srv://souravlayekjsr100:Sourav%40123@cluster0.yhf674r.mongodb.net/ecommerce?retryWrites=true&w=majority&appName=Cluster0");
 
 app.get("/api/products", async (req, res) => {
   try {
